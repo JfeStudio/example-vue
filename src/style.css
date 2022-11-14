@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  position: relative;
+  padding: 4.5rem;
+  background-color: #ccc;
+}
+.container {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.col-header {
+  display: flex;
+  /* justify-content: start; */
+  /* align-items: flex-start; */
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.title {
+  font-size: 2.5rem;
+  color: #f2f2f2;
+}
+.navbar {
+  padding: 2.5rem 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #3b82f6;
+  column-gap: 4rem;
+}
+.role {
+  font-size: 1.2rem;
+  color: #f2f2f2;
+}
+.btn-header button {
+  border: none;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.btn-header button:not(.btn-header button:last-child) {
+  margin-right: 0.7rem;
+}
+/* .btn-header button::n */
+.btn-header button:nth-child(2) {
+  background-color: #10b981;
+  color: #f2f2f2;
+}
+.images-hero img {
+  width: 100%;
+}
+.images-hero {
+  border: 3px solid #f2f2f2;
+  width: 230px;
+  height: 230px;
+  transform: translateY(55px);
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.about {
+  border-bottom: 1px solid #ccc;
+  padding: 3.5rem 4rem;
+  display: flex;
+  column-gap: 3rem;
+  background-color: #fff;
+}
+.second-title,
+.third-title {
+  margin-bottom: 1.2rem;
+}
+.second-paragraf {
+  line-height: 1.5;
+}
+.row-about:nth-child(1) {
+  flex-basis: 60%;
+}
+.row-about:nth-child(2) p {
+  font-weight: 600;
+}
+.row-about p {
+  margin-bottom: 1rem;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem 3rem;
+  padding: 3.5rem 4rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.form-input .form-control:not(.form-control:last-child) {
+  margin-right: 0.7rem;
+}
+.form-control {
+  border: 1px solid #ccc;
+  width: 261px;
+  color: #111;
+  font-weight: 600;
+  background-color: #f1f5f9;
+  padding: 0.8rem 1rem;
+}
+textarea {
+  background-color: #f1f5f9;
+  color: #111;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  padding: 0.8rem 0.8rem;
+  border: 1px solid #ccc;
+}
+form button {
+  margin-top: 1.2rem;
+  display: block;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  color: #f3f3f3;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.fix {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+.copyrights {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+}
+.copyrights a {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  background: rgb(255, 255, 255);
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #00000070;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(125deg, #3b82f6, #3b82f6);
+  border-radius: 10px;
+}
+/* breakpoint 830px */
+@media only screen and (max-width: 830px) {
+  .navbar {
+    row-gap: 1.4rem;
+    justify-content: center;
+  }
+  .images-hero {
+    transform: translateY(0);
+  }
+  .col-header {
+    text-align: center;
+  }
+  .about {
+    flex-wrap: wrap;
+  }
+  .about .row-about:nth-child(1) {
+    flex-basis: 100%;
+    margin-bottom: 0.6rem;
+  }
+}
+/* breakpoint 576px */
+@media only screen and (max-width: 576px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    border-radius: 0;
+  }
+  .navbar,
+  .about,
+  .contact {
+    padding: 2.5rem 1.5rem;
+  }
+  .contact {
+    gap: 1rem 3rem;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  .images-hero {
+    width: 200px;
+    height: 200px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .about {
+    column-gap: 1.8rem;
+  }
+  .form-control {
+    width: 100%;
+  }
+  .btn-header button {
+    padding: 0.8rem 1.4rem;
+  }
+  .form-control:nth-child(1) {
+    margin-bottom: 0.7rem;
+  }
+  textarea {
+    width: 100%;
+  }
+  form button {
+    padding: 0.8rem 1.4rem;
+  }
+  .copyrights {
+    width: max-content;
+  }
+  .copyrights a {
+    color: #3b82f6;
+    font-weight: 700;
+  }
+}
